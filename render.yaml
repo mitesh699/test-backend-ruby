@@ -2,7 +2,7 @@ services:
   - type: web
     name: folio-crm-api
     runtime: ruby
-    buildCommand: bundle config set --local deployment false && bundle install
+    buildCommand: bundle install
     startCommand: bundle exec rackup config.ru -p $PORT -o 0.0.0.0
     envVars:
       - key: RACK_ENV
